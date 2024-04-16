@@ -22,7 +22,7 @@ jobs:
         - name: Build release artifact
           run: pyinstaller --onefile .\split_cheats_melonds.py
         - name: Rename exe
-          run: Move-Item split_cheats_melonds.exe MelonDSCheatSplitter.exe
+          run: Move-Item "dist/split_cheats_melonds.exe" "dist/MelonDSCheatSplitter.exe"
         - name: Create release
           uses: softprops/action-gh-release@v2.0.4
           with: 
